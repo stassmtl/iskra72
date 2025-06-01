@@ -37,6 +37,28 @@
     margin: auto;
 }
 
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* делаем шапку колонкой */
+        align-items: center; /* центрируем по горизонтали */
+        padding: 10px;
+    }
+    .header img {
+        width: 60px; /* ещё меньше логотип */
+        margin-bottom: 10px;
+    }
+    .nav {
+        flex-direction: column; /* ссылки вертикально */
+        gap: 10px;
+        width: 100%; /* растягиваем на всю ширину */
+        align-items: center;
+    }
+    .nav a {
+        width: 80%; /* делаем ссылки шириной 80% контейнера */
+        text-align: center; /* центрируем текст */
+        padding: 10px;
+    }
+}
 .header {
     font-family: 'bold', sans-serif;
     background-color: #ffd45f;
