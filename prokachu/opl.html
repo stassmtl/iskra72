@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница оплаты</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .payment-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #d3a200; /* Цвет фона кнопки */
+            color: white; /* Цвет текста кнопки */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s; /* Плавный переход при наведении */
+        }
+
+        button:hover {
+            background-color: #d3a200; /* Цвет фона при наведении */
+        }
+
+        a {
+            color: white; /* Цвет текста ссылки */
+            text-decoration: none; /* Убрать подчеркнутый текст */
+            display: block; /* Делаем ссылку блочным элементом, чтобы она полностью заполняла кнопку */
+            height: 100%; /* Позволяет ссылке заполнять всю кнопку */
+            width: 100%; /* Позволяет ссылке заполнять всю кнопку */
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        .modal {
+            display: none; /* Скрыто по умолчанию */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .error {
+            color: red;
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Оплата</h2>
+        <form id="paymentForm" onsubmit="return validatePayment();">
+            <label for="cardNumber">Номер карты:</label>
+            <input type="text" id="cardNumber" required>
+
+            <label for="cardHolder">Имя владельца карты:</label>
+            <input type="text" id="cardHolder" required>
+
+            <label for="expiryDate">Срок действия (MM/YY):</label>
+            <input type="text" id="expiryDate" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="number" id="cvv" required min="100" max="999">
+
+
+            <button type="submit">Подтвердить оплату</button>
+            <button type="submit"><a href="pokachu/index.php">На главную</a></button>
+        </form>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h3>Оплата прошла успешно!</h3>
+            <button id="closeModal" onclick="closeModal()">Закрыть</button>
+        </div>
+    </div>
+
+    <script>
+        function validatePayment() {
+            const cardNumber = document.getElementById('cardNumber').value;
+            const cardHolder = document.getElementById('cardHolder').value;
+            const expiryDate = document.getElementById('expiryDate').value;
+            const cvv = document.getElementById('cvv').value;
+            const errorMessage = document.getElementById('error-message');
+
+
+            // Если все в порядке, показываем модальное окно
+            document.getElementById('myModal').style.display = 'block';
+            return false; // Предотвращаем отправку формы
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+            // Дополнительно: можно очистить форму или перенаправить пользователя
+            document.getElementById('paymentForm').reset(); // Очистка формы
+        }
+
+        // Закрытие модального окна при нажатии вне его
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
