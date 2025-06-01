@@ -12,6 +12,39 @@
     /* или justify-content: center; для центрирования */
     align-items: center; /* Вертикальное выравнивание по центру */
 }
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* делаем шапку колонкой */
+        align-items: center; /* центрируем по горизонтали */
+        padding: 10px;
+    }
+    .header img {
+        width: 60px; /* ещё меньше логотип */
+        margin-bottom: 10px;
+    }
+    .nav {
+        flex-direction: column; /* ссылки вертикально */
+        gap: 10px;
+        width: 100%; /* растягиваем на всю ширину */
+        align-items: center;
+    }
+    .nav a {
+        width: 80%; /* делаем ссылки шириной 80% контейнера */
+        text-align: center; /* центрируем текст */
+        padding: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery-item {
+        width: 90%; /* занимает почти всю ширину контейнера */
+        height: auto; /* высота автоматически подстраивается */
+        margin: 10px 0; /* уменьшение отступов между элементами */
+    }
+}
 
 .admin-item {
     text-align: center;
@@ -37,28 +70,6 @@
     margin: auto;
 }
 
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column; /* делаем шапку колонкой */
-        align-items: center; /* центрируем по горизонтали */
-        padding: 10px;
-    }
-    .header img {
-        width: 60px; /* ещё меньше логотип */
-        margin-bottom: 10px;
-    }
-    .nav {
-        flex-direction: column; /* ссылки вертикально */
-        gap: 10px;
-        width: 100%; /* растягиваем на всю ширину */
-        align-items: center;
-    }
-    .nav a {
-        width: 80%; /* делаем ссылки шириной 80% контейнера */
-        text-align: center; /* центрируем текст */
-        padding: 10px;
-    }
-}
 .header {
     font-family: 'bold', sans-serif;
     background-color: #ffd45f;
@@ -264,29 +275,6 @@ h3 {
     padding: 40px 0;
 
 }
-.slider {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-  }
-   
-  .slide {
-    position: absolute;
-    max-width: 100%; /* Изображение не будет выходить за пределы контейнера */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    display: block; /* Чтобы убрать пробелы снизу */
-    margin: 20px auto; /* Центрирование по горизонтали */
-    transition: opacity 1s;
-
-    border-radius: 10px; /* Закругленные углы */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Тень */
-    
-  }
-   
-  .slide:first-child {
-    opacity: 1;
-  }
 
 .indicators {
     display: flex;
@@ -332,7 +320,41 @@ h3 {
 .description button:hover {
     background-color: var(--gray);
 }
+.slider-container {
+    width: 100%;
+    overflow: hidden; /* скрывает части изображений за пределами контейнера */
+    position: relative;
+}
 
+/* Стиль для слайда */
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стиль для изображения */
+.slide {
+    max-width: 100%; /* чтобы изображение не выходило за границы контейнера */
+    height: auto; /* сохраняет пропорции изображения */
+    display: block; /* убирает лишние отступы снизу */
+    border-radius: 10px; /* скругление углов для красоты */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* небольшая тень для объемности */
+    transition: transform 0.3s; /* плавное увеличение при необходимости */
+}
+
+/* Опционально: эффект при наведении */
+.slide:hover {
+    transform: scale(1.02);
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .slide {
+        width: 100%; /* растягиваем изображение на всю ширину контейнера */
+        height: auto;
+    }
+}
 /* search */
 .search {
 padding: 50px;
@@ -707,17 +729,6 @@ padding: 50px 0;
 }
 .profile__titling {
     margin: 50px 0 10px;
-}
-@media (max-width: 768px) {
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-    .gallery-item {
-        width: 90%; /* занимает почти всю ширину контейнера */
-        height: auto; /* высота автоматически подстраивается */
-        margin: 10px 0; /* уменьшение отступов между элементами */
-    }
 }
 .gallery {
     display: flex;
