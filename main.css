@@ -708,6 +708,17 @@ padding: 50px 0;
 .profile__titling {
     margin: 50px 0 10px;
 }
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery-item {
+        width: 90%; /* занимает почти всю ширину контейнера */
+        height: auto; /* высота автоматически подстраивается */
+        margin: 10px 0; /* уменьшение отступов между элементами */
+    }
+}
 .gallery {
     display: flex;
     flex-wrap: wrap;
