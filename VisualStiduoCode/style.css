@@ -1,0 +1,352 @@
+    body {
+            font-family: sans-serif;
+            background-color: #fffde7; /* Очень светло-желтый фон для всей страницы */
+            color: #333; /* Темный текст для читаемости */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh; /* Чтобы контент был хотя бы по центру, если его мало */
+        }
+
+        /* Стили для header.php, если он есть и тоже должен быть в стиле */
+        /* header { background-color: #ffd700; padding: 10px 0; width: 100%; text-align: center; } */
+
+        h1 {
+            color: #f57f17; /* Темно-желтый или оранжевый для заголовка */
+            text-align: center;
+            margin-top: 20px; /* Немного отступа сверху */
+        }
+        
+
+.hedimg {
+    position: relative;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 0px;
+
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+table {
+    width: 80%; /* уменьшенная ширина */
+    max-width: 700px; /* ограничение максимальной ширины */
+    margin: 20px auto 40px; /* автоматические отступы по бокам для центрирования */
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+ table {
+          width: 80%; /* уменьшенная ширина */
+    max-width: 700px; /* ограничение максимальной ширины */
+    margin: 20px auto 40px; /* автоматические отступы по бокам для центрирования */
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #ffac11;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .form-container {
+            margin-top: auto; /* Отодвигает форму вниз */
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], button {
+            padding: 10px;
+            margin: 5px 0;
+            width: calc(100% - 22px); /* Учитывает отступы */
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #ffac11;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffac11;
+        }
+ul {
+    
+    position: relative;
+    text-align: justify;
+    line-height: 0;/*
+    height: 44px;*/
+ 
+    bottom: 50px;
+    display:table;
+  margin:auto;
+    
+}
+
+
+ul>li {
+/*    font-size: 30px;*/
+    display: inline-block;
+    margin-right: 40px;
+
+
+  text-align:center;
+
+}
+
+ul>li>a {
+/*    padding: 20px;*/
+    color: #ffac11;
+  font-size: 33px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+   text-shadow:
+    -2px -2px 0 #a17600,
+    2px -2px 0 #a17600,
+    -2px 2px 0 #a17600,
+    2px 2px 0 #a17600;
+
+}
+ul>li>a:hover {
+
+    color: #2e2e2e;
+
+}
+
+.outform>a {
+     color: #252525;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+h1{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #141414;
+
+}
+
+p {
+font-size: 20px;
+
+width: 300px;
+margin-bottom: -5px;
+
+}
+#fio {
+    margin-bottom: -20px;
+}
+#zareg {
+    width: 200px;
+}
+
+select {
+    width: 150px;
+}
+
+form {
+   
+    display: inline-block;
+
+}
+
+
+input {
+    width: 300px;
+    height: 35px;
+    margin-bottom: 20px;
+}
+button {
+width: 110px;
+height: 40px;
+}
+  .form-container {
+            background-color: #ffffff; /* Белый фон для формы */
+            padding: 25px 30px; /* Внутренние отступы в контейнере формы */
+            border-radius: 8px; /* Скругленные углы */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
+            width: 100%;
+            max-width: 400px; /* Максимальная ширина формы */
+            box-sizing: border-box;
+        }
+
+        .form-container p {
+            font-size: 16px; /* Размер шрифта для параграфов */
+            color: #333333; /* Темно-серый цвет текста */
+            margin-bottom: 8px; /* Отступ снизу у параграфов */
+            font-weight: 500; /* Немного жирнее обычного */
+        }
+
+        .form-container select,
+        .form-container input[type="date"] {
+            width: 100%; /* Поля занимают всю доступную ширину */
+            padding: 12px 15px; /* Внутренние отступы в полях */
+            margin-bottom: 20px; /* Отступ снизу у полей */
+            border: 1px solid #cccccc; /* Серая рамка */
+            border-radius: 6px; /* Скругленные углы у полей */
+            box-sizing: border-box; /* Чтобы padding не влиял на общую ширину */
+            font-size: 15px; /* Размер шрифта в полях */
+            color: #555555; /* Цвет текста в полях */
+            background-color: #fdfdfd; /* Очень светлый фон для полей */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Плавный переход для фокуса */
+        }
+
+        .form-container select:focus,
+        .form-container input[type="date"]:focus {
+            border-color: #007bff; /* Цвет рамки при фокусе (например, синий) */
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Легкая подсветка при фокусе */
+            outline: none; /* Убираем стандартный outline браузера */
+        }
+
+        /* Стилизация стрелки в select (может отличаться в разных браузерах) */
+        .form-container select {
+            appearance: none; /* Убираем стандартный вид стрелки */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 10px 10px;
+            padding-right: 40px; /* Дополнительный отступ справа для иконки */
+        }
+
+        .form-container input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 0.7; /* Немного прозрачнее иконка календаря */
+            cursor: pointer;
+        }
+/* Мобильная адаптация */
+/* Мобильная адаптация */
+
+@media (max-width: 768px) {
+  table {
+    width: 95%;
+    max-width: none;
+    margin: 15px auto 30px;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px 8px;
+  }
+
+  input[type="text"], button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .form-container {
+    padding: 15px;
+    margin: 0 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-top: 15px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  th, td {
+    padding: 8px 6px;
+  }
+
+  input[type="text"], button {
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .form-container {
+    margin: 0 5px 15px;
+    padding: 12px;
+  }
+
+  .hedimg {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+/* При очень маленьких экранах можно дополнительно уменьшить текст */
+@media (max-width: 320px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+
+  input[type="text"], button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Стиль для выпадающего списка */
+select[name="cars"] {
+    width: 100%;
+    max-width: 320px; /* ограничение по ширине для удобства */
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #d4ab38;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Смена цвета бордера при фокусе */
+select[name="cars"]:focus {
+    outline: none;
+    border-color: #b07a10;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 480px) {
+    p {
+        font-size: 14px;
+    }
+    select[name="cars"] {
+        max-width: 100%;
+        font-size: 34px;
+        padding: 30px;
+    }
+}

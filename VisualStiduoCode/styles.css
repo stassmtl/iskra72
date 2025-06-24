@@ -1,0 +1,113 @@
+.wrap {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    
+     position: relative;
+}
+.hedimg {
+    position: relative;
+    width: 100%;
+    margin-left: -8px;
+    margin-top: -8px;
+
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+table {
+          width: 80%; /* уменьшенная ширина */
+    max-width: 700px; /* ограничение максимальной ширины */
+    margin: 20px auto 40px; /* автоматические отступы по бокам для центрирования */
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+ul {
+    
+    position: relative;
+    text-align: justify;
+    line-height: 0;/*
+    height: 44px;*/
+ 
+    bottom: 50px;
+    display:table;
+  margin:auto;
+    
+}
+ul>li {
+/*    font-size: 30px;*/
+    display: inline-block;
+    margin-right: 40px;
+
+
+  text-align:center;
+
+}
+ul>li>a {
+/*    padding: 20px;*/
+    color: #ffffff;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+ul>li>a:hover {
+
+    color: #2e2e2e;
+
+}
+
+.outform>a {
+     color: #FFFFFF;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+h1{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+p {
+font-size: 20px;
+
+width: 300px;
+margin-bottom: -5px;
+
+}
+#fio {
+    margin-bottom: -20px;
+}
+#zareg {
+    width: 200px;
+}
+
+select {
+    width: 150px;
+}
+
+form {
+   
+    display: inline-block;
+
+}
+
+
+input {
+    width: 300px;
+    height: 35px;
+    margin-bottom: 20px;
+}
+button {
+width: 110px;
+height: 40px;
+}
+
